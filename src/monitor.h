@@ -8,24 +8,20 @@ int pcLogger1()
 {
   using namespace monitor;
   if(counter<100){counter++;return 0;}
-  //Serial.print(millis());       Serial.print(" ");        //time stamp
-  //Serial.print(state.ypr[0] );  Serial.print(" ");
-//  Serial.print(state.theta   ); Serial.print("   ");
-  Serial.print(state.fmean     ); Serial.print("      ");
-  Serial.print(state.pitchPid  ); Serial.print("      ");
-  Serial.print(state.rollPid   ); Serial.print("                 ");
-  Serial.print(state.thrust1   );         Serial.print("  ");
-  Serial.print(state.thrust2 );           Serial.print("  ");
- //Serial.print(state.ypr[0] ); Serial.print(" ");
-  //Serial.print(state.ypr[1] ); Serial.print(" ");
-  Serial.print(state.thrust3 );
-  Serial.print(state.thrust4     );     Serial.print("      ");
 
-  Serial.print(state.r_input_signal[1-1]);Serial.print(" ");
-  Serial.print(state.r_input_signal[2-1]);Serial.print(" ");
-  Serial.print(state.r_input_signal[3-1]);Serial.print(" ");
-  Serial.println(state.r_input_signal[4-1]);Serial.print(" ");
-//  Serial.print(state.yawInputIntegral );
+  Serial.print(state.fmean     ); Serial.print("     ");
+  Serial.print(state.pitchPid  ); Serial.print("     ");
+  Serial.print(state.rollPid   ); Serial.print("     ");
+  Serial.print(state.thrust1   ); Serial.print("     ");
+  Serial.print(state.thrust2   ); Serial.print("     ");
+  Serial.print(state.thrust3   ); Serial.print("     ");
+  Serial.print(state.thrust4   ); Serial.print("     ");
+
+  Serial.print(state.r_input_signal[0]);   Serial.print("  ");
+  Serial.print(state.r_input_signal[1]);   Serial.print("  ");
+  Serial.print(state.r_input_signal[2]);   Serial.print("  ");
+  Serial.println(state.r_input_signal[3]); Serial.print("  ");
+
   counter=0;
   return 0;
 }
@@ -69,5 +65,4 @@ int showGains()
   counter=0;
 
   return 0;
-
 }
